@@ -1,0 +1,90 @@
+.App {
+  text-align: center;
+}
+
+.App-header {
+  background-color: #d02f2f;
+  min-height: 10vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start; /* Align items to the start to allow better control with margins */
+  padding-top: 10px; /* Add some padding to the top for spacing */
+  font-size: 3rem;
+  color: #61dafb;
+  margin-top: -200px;
+}
+
+.App-nav {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  min-height: 1vh;
+}
+
+.Home .App-nav {
+  margin-top: -30px; /* Override for Home */
+}
+
+.nav-link {
+  color: #61dafb;
+  margin: 0 1rem;
+  text-decoration: none;
+  font-size: 2rem; /* Adjust the font size as needed */
+}
+
+.nav-link:hover {
+  text-decoration: underline;
+}
+
+/* Home Page Styles */
+.Home {
+  background-color: #d02f2f;
+  color: #5e27cb;
+  color: #5e27cb;
+  min-height: 100vh;
+  min-width: 100vw;
+  padding-top: 0; /* Remove padding at the top */
+  margin-top: 0; /* Remove margin at the top */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Joke Page Styles */
+.Joke {
+  background-color: #3bff52;
+  color: #000000;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+
+/* Your Mom Page Styles */
+.YourRelative {
+  background-color: #d02f2f;
+  color: #000000;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative
+}
+
+/* Override for YourRelative */
+.YourRelative .App-nav {
+  position: absolute; /* Position absolutely within .YourRelative */
+  top: 0; /* Align to the top */
+  left: 0; /* Align to the left */
+  margin: 10px; /* Optional: Add margin for some space from edges */
+  display: flex; /* Keep the links in a row */
+}
+
+.YourRelative .App-nav .nav-link {
+  font-size: 20px;
+}
