@@ -16,7 +16,7 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '16' # Ensure compatibility if you need Node.js for other steps
+          node-version: '20'  # Ensure it uses Node.js 20
 
       - name: Deploy to S3
         env:
