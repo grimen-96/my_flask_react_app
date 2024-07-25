@@ -30,12 +30,20 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y awscli
 
+      - name: Check AWS CLI installation
+        run: aws --version
+
+      - name: List S3 buckets (for debugging)
+        run: aws s3 ls
+
       - name: Deploy to S3
         run: |
+          echo "Deploying to S3 bucket: ${{ secrets.S3_BUCKET_NAME }}"
           aws s3 sync ./build s3://${{ secrets.S3_BUCKET_NAME }} --delete
 
-      - name: Debug AWS CLI
+      - name: Debug AWS CLI (if deployment fails)
         if: failure()
         run: |
+          echo "Debugging AWS CLI"
           aws --version
           aws s3 ls
